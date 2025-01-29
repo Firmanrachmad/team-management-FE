@@ -1,0 +1,23 @@
+<form {{on "submit" this.submitForm}}>
+    <div class="mb-3">
+        <label for="team-name" class="form-label">Team Name</label>
+        <Input
+            @type="text"
+            @value={{this.name}}
+            class="form-control"
+            id="team-name"
+            placeholder="Enter team name"
+        />
+    </div>
+    <div class="mb-3">
+        <label for="team-description" class="form-label">Team Description</label>
+        <Input
+            @type="text"
+            @value={{this.description}}
+            class="form-control"
+            id="team-description"
+            placeholder="Enter team description"
+        />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
