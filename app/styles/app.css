@@ -1,0 +1,98 @@
+/* Body styling */
+body {
+    background: linear-gradient(135deg, #ffffff, #f5f5f5);
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.btn-warning {
+    background: #f0ad4e;
+    color: white;
+    border: none;
+}
+
+.btn-warning:hover {
+    background: #ec971f;
+    box-shadow: 0px 4px 12px rgba(240, 173, 78, 0.2);
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background: #d9534f;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #c9302c;
+    box-shadow: 0px 4px 12px rgba(217, 83, 72, 0.2);
+    transform: scale(1.05);
+}
+
+/* Icon Styling */
+i {
+    font-size: 1.2em;
+}
+
+/* Card Styling */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Card Icon Styling */
+.card .card-title i {
+    margin-right: 8px;
+    color: #007bff; /* Warna biru atau warna lain yang sesuai */
+}
+
+.card .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+

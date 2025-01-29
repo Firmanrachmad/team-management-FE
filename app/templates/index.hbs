@@ -1,0 +1,38 @@
+{{page-title "Homepage"}}
+
+<div class="row align-items-center mb-4">
+    <div class="col-6">
+        <div class="d-flex align-items-center gap-3">
+            <h1 class="display-6 mb-0">Lists of Teams</h1>
+            <button class="btn btn-primary btn-lg align-self-center h-auto">
+                <i class="fas fa-plus-circle me-2"></i> Add Team
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <TeamWidget 
+        @title="Team 1" 
+        @description="This is the first team" />
+    </div>
+
+    <div class="col-md-4">
+        <TeamWidget 
+        @title="Team 2" 
+        @description="This is the second team" />
+    </div>
+
+    <div class="col-md-4">
+        <TeamWidget 
+        @title="Team 3" 
+        @description="This is the third team" />
+    </div>
+
+    <div class="col-md-4">
+        <TeamWidget 
+        @title="Team 4" 
+        @description="This is the fourth team" />
+    </div>
+</div>
