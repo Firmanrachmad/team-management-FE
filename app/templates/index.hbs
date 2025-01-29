@@ -12,27 +12,12 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <TeamWidget 
-        @title="Team 1" 
-        @description="This is the first team" />
-    </div>
-
-    <div class="col-md-4">
-        <TeamWidget 
-        @title="Team 2" 
-        @description="This is the second team" />
-    </div>
-
-    <div class="col-md-4">
-        <TeamWidget 
-        @title="Team 3" 
-        @description="This is the third team" />
-    </div>
-
-    <div class="col-md-4">
-        <TeamWidget 
-        @title="Team 4" 
-        @description="This is the fourth team" />
-    </div>
+    {{#each @model as |team|}}
+        <div class="col-md-4">
+            <TeamWidget 
+                @title={{team.name}} 
+                @description={{team.description}} 
+            />
+        </div>
+    {{/each}}
 </div>
