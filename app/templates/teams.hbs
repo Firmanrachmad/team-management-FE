@@ -11,8 +11,8 @@
 <div class="row">
     <div class="col-md-4 d-flex align-items-center justify-content-center">
         <TeamDetail
-            @name={{this.model.name}}
-            @description={{this.model.description}} 
+            @name={{this.model.team.name}}
+            @description={{this.model.team.description}} 
         />
     </div>
 
@@ -24,26 +24,14 @@
             </button>
         </div>
         <div class="row">
+            {{#each this.model.member as |member|}}
             <div class="col-md-6 mb-3">
                 <MemberWidget
-                    @name="John Doe"
-                    @role="Developer"
+                    @name={{member.name}}
+                    @role={{member.role}}
                 />
             </div>
-
-            <div class="col-md-6 mb-3">
-                <MemberWidget
-                    @name="John Doe"
-                    @role="Developer"
-                />
-            </div>
-
-            <div class="col-md-6 mb-3">
-                <MemberWidget
-                    @name="John Doe"
-                    @role="Developer"
-                />
-            </div>
+            {{/each}}
         </div>
     </div>
     
