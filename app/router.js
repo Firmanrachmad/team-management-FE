@@ -12,4 +12,5 @@ Router.map(function () {
   this.route('members');
   this.route('add-team');
   this.route('edit-team', { path: '/edit-team/:team_id' });
+  this.route('edit-member', { path: '/teams/:team_id/edit-member/:member_id' });
 });

@@ -3,5 +3,16 @@
             <i class="fas fa-user mb-4"></i>
         <h5 class="fw-bold">{{@name}}</h5>
         <p class="text-muted">{{@role}}</p>
+        <div class="d-flex justify-content-center gap-2 mt-4">
+            <LinkTo @route="edit-member" @models={{array @teamId @member.id}} class="btn btn-sm btn-warning">
+                <i class="fas fa-edit me-2"></i> Edit
+            </LinkTo>
+            <button class="btn btn-sm btn-danger" type="button"{{on "click" this.deleteMember}}>
+                <i class="fas fa-trash-alt me-2"></i> Delete
+            </button>
+        </div>
     </div>
 </div>
+
+<!-- Debug: Check teamId and member.id -->
+{{!-- <div>Debug: Team ID = {{@teamId}}, Member ID = {{@member.id}}</div> --}}

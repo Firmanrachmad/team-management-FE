@@ -29,8 +29,11 @@
                 <MemberWidget
                     @name={{member.name}}
                     @role={{member.role}}
+                    @member={{member}}
+                    @teamId={{this.model.team.id}}
                 />
             </div>
+            
             {{/each}}
         </div>
     </div>
