@@ -11,7 +11,6 @@ export default class TeamsRoute extends Route {
       `http://localhost:3000/api/teams/${params.team_id}/members`
     );
     let member = await memberResponse.json();
-    console.log(member)
 
     return { team, member };
   }

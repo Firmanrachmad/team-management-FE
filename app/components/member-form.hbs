@@ -1,0 +1,25 @@
+<form {{on "submit" this.submitForm}}>
+    <div class="mb-3">
+        <label for="member-name" class="form-label">Member Name</label>
+        <Input
+            @type="text"
+            @value={{this.name}}
+            class="form-control"
+            id="member-name"
+            placeholder="Enter member name"
+            {{on "input" this.updateName}}
+        />
+    </div>
+    <div class="mb-3">
+        <label for="member-role" class="form-label">Member Role</label>
+        <Input
+            @type="text"
+            @value={{this.role}}
+            class="form-control"
+            id="member-role"
+            placeholder="Enter member role"
+            {{on "input" this.updateRole}}
+        />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

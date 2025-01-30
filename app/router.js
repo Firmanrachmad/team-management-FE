@@ -8,6 +8,7 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
   this.route('teams', { path: '/teams/:team_id' });
+  this.route('add-member', { path: '/teams/:team_id/add-member' });
   this.route('members');
   this.route('add-team');
   this.route('edit-team', { path: '/edit-team/:team_id' });
