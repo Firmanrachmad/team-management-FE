@@ -1,10 +1,10 @@
-<form {{on "submit" this.submitForm}}>
+<form {{on "submit" this.submitForm}} class="p-4 rounded shadow-sm bg-white">
     <div class="mb-3">
         <label for="member-name" class="form-label">Member Name</label>
         <Input
             @type="text"
             @value={{this.name}}
-            class="form-control"
+            class="form-control input-field"
             id="member-name"
             placeholder="Enter member name"
             {{on "input" this.updateName}}
@@ -15,13 +15,16 @@
         <Input
             @type="text"
             @value={{this.role}}
-            class="form-control"
+            class="form-control input-field"
             id="member-role"
             placeholder="Enter member role"
             {{on "input" this.updateRole}}
         />
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="d-flex gap-3 justify-content-between">
+        <button type="button" class="btn btn-secondary w-50" onclick="window.history.back();">Cancel</button>
+        <button type="submit" class="btn btn-primary w-50">Submit</button>
+    </div>
 </form>
 
 {{!-- <div>Debug: Team ID = {{@teamId}}, Member ID = {{this.args.member.id}}</div> --}}

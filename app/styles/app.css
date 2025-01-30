@@ -1,10 +1,49 @@
-/* Body styling */
-/* body {
-    background: linear-gradient(135deg, #ffffff, #f5f5f5);
+/* Body styling with a subtle motif */
+body {
+    background-color: #f9f9f9; /* Light gray, modern & clean */
+    background-size: 20px 20px;
+    background-color: #f9fafb;
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
     color: #333;
-} */
+}
+
+
+
+
+/* Modern topbar styling */
+.topbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #333 !important;
+    margin-left: 150px;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-color: #333;
+}
+
+.nav-link {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    color: #333 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff !important;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+  
 
 /* Button Styling */
 .btn {
@@ -95,4 +134,46 @@ i {
     font-weight: 600;
     color: #333;
 }
+
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;  /* Optional: add a smooth transform effect */
+}
+
+.clickable-card:hover {
+    transform: scale(1.05);  /* Optional: make the card grow slightly on hover */
+}
+
+/* Form styling */
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+.input-field {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 150px;  /* Adjust the height of the textarea */
+}
+
+/* Border and shadow for form container */
+form {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 
