@@ -17,15 +17,18 @@ export default class IndexRoute extends Route {
     if (!confirm('Are you sure you want to delete this team?')) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/api/teams/${teamId}`, {
-        method: 'DELETE',
-      });
+      const response = await fetch(
+        `http://localhost:3000/api/teams/${teamId}`,
+        {
+          method: 'DELETE',
+        }
+      );
 
       if (response.ok) {
         alert('Team deleted successfully!');
-        
+
         // Update teams list
-        this.teams = this.teams.filter(team => team.id !== teamId);
+        this.teams = this.teams.filter((team) => team.id !== teamId);
       } else {
         throw new Error('Failed to delete team');
       }

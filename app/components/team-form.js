@@ -32,13 +32,16 @@ export default class TeamFormComponent extends Component {
       let response;
       if (this.args.team) {
         // Edit existing team
-        response = await fetch(`http://localhost:3000/api/teams/${this.args.team.id}`, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(teamData),
-        });
+        response = await fetch(
+          `http://localhost:3000/api/teams/${this.args.team.id}`,
+          {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(teamData),
+          }
+        );
       } else {
         // Create new team
         response = await fetch('http://localhost:3000/api/teams', {
@@ -51,12 +54,18 @@ export default class TeamFormComponent extends Component {
       }
 
       if (response.ok) {
-        alert(this.args.team ? 'Team updated successfully!' : 'Team created successfully!');
+        alert(
+          this.args.team
+            ? 'Team updated successfully!'
+            : 'Team created successfully!'
+        );
         this.name = '';
         this.description = '';
         this.router.transitionTo('index');
       } else {
-        throw new Error(this.args.team ? 'Failed to update team' : 'Failed to create team');
+        throw new Error(
+          this.args.team ? 'Failed to update team' : 'Failed to create team'
+        );
       }
     } catch (error) {
       console.error('Error:', error);

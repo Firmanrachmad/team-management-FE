@@ -1,9 +1,9 @@
-<div class="card team-widget mb-4">
+<div class="card mb-4" {{on "click" this.goToTeam}}>
     <div class="card-body">
         <div class="row align-items-center mb-4">
             <div class="col-auto">
-            <!-- Random Icon -->
-            <i class="{{concat 'fas fa-lg ' this.randomIcon}}"></i>
+                <!-- Random Icon -->
+                <i class="{{concat 'fas fa-lg ' this.randomIcon}}"></i>
             </div>
             <div class="col">
                 <h5 class="card-title mb-0">{{@title}}</h5>
@@ -13,10 +13,11 @@
 
         <!-- Edit/Delete with icons -->
         <div class="d-flex justify-content-end gap-2 mt-auto">
-            <LinkTo @route="edit-team" @model={{@team.id}} class="btn btn-sm btn-warning">
+            <LinkTo @route="edit-team" @model={{@team.id}} class="btn btn-sm btn-warning"
+            {{on "click" this.stopPropagation}}>
                 <i class="fas fa-edit me-2"></i> Edit
             </LinkTo>
-            <button class="btn btn-sm btn-danger" 
+            <button class="btn btn-sm btn-danger" type="button" {{on "click" this.stopPropagation}}
             {{on "click" this.deleteTeam}}>
                 <i class="fas fa-trash-alt me-2"></i> Delete
             </button>

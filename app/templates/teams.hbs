@@ -1,3 +1,52 @@
-{{page-title "Teams"}}
-Team Details
-{{outlet}}
+{{page-title "Team Details"}}
+
+<div class="row mb-4">
+    <div class="col-6">
+        <div class="d-flex gap-3">
+            <h1 class="display-6 mb-4">Team Details</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 d-flex align-items-center justify-content-center">
+        <TeamDetail
+            @name={{this.model.name}}
+            @description={{this.model.description}} 
+        />
+    </div>
+
+    <div class="col-md-8">
+        <div class="d-flex align-items-center gap-3 mb-4">
+            <h3 class="mb-0">Member List</h3>
+            <button class="btn btn-primary btn-lg h-auto">
+                <i class="fas fa-plus-circle me-2"></i> Add Member
+            </button>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <MemberWidget
+                    @name="John Doe"
+                    @role="Developer"
+                />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <MemberWidget
+                    @name="John Doe"
+                    @role="Developer"
+                />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <MemberWidget
+                    @name="John Doe"
+                    @role="Developer"
+                />
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
