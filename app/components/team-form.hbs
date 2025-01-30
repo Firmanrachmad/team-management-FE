@@ -7,6 +7,7 @@
             class="form-control"
             id="team-name"
             placeholder="Enter team name"
+            {{on "input" this.updateName}}
         />
     </div>
     <div class="mb-3">
@@ -17,6 +18,7 @@
             class="form-control"
             id="team-description"
             placeholder="Enter team description"
+            {{on "input" this.updateDescription}}
         />
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
