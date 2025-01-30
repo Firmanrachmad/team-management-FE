@@ -61,7 +61,12 @@ export default class TeamFormComponent extends Component {
         );
         this.name = '';
         this.description = '';
-        this.router.transitionTo('index');
+        if(this.args.team){
+          this.router.transitionTo('teams', this.args.team.id);
+
+        } else {
+          this.router.transitionTo('index');
+        }
       } else {
         throw new Error(
           this.args.team ? 'Failed to update team' : 'Failed to create team'

@@ -25,33 +25,5 @@ export default class TeamWidgetComponent extends Component {
     this.router.transitionTo('teams', this.args.team.id);
   }
 
-  @action
-  stopPropagation(event) {
-    event.stopPropagation(); // Stops the click event from bubbling up
-  }
-
-  @action
-  async deleteTeam() {
-    const confirmDelete = confirm('Are you sure you want to delete this team?');
-    if (confirmDelete) {
-      try {
-        const response = await fetch(
-          `http://localhost:3000/api/teams/${this.args.team.id}`,
-          {
-            method: 'DELETE',
-          }
-        );
-
-        if (response.ok) {
-          alert('Team deleted successfully!');
-          window.location.reload();
-        } else {
-          throw new Error('Failed to delete team');
-        }
-      } catch (error) {
-        console.error('Error deleting team:', error);
-        alert('Failed to delete team. Please try again.');
-      }
-    }
-  }
+  
 }

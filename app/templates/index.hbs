@@ -1,5 +1,9 @@
 {{page-title "Homepage"}}
 
+<div class="text-center mb-4">
+    <h1 class="display-5">Homepage</h1>
+</div>
+
 <div class="row mb-4">
     <div class="col-6">
         <div class="d-flex gap-3">
@@ -18,7 +22,6 @@
                 @title={{team.name}} 
                 @description={{team.description}} 
                 @team={{team}}
-                @onDelete={{this.deleteTeam}}
             />
         </div>
     {{/each}}
