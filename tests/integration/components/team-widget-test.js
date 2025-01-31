@@ -10,17 +10,15 @@ module('Integration | Component | team-widget', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
+    this.set('title', 'Team Gamma');
+    this.set('description', 'A team that focus on UI/UX design');
+
     await render(hbs`<TeamWidget />`);
 
-    assert.dom(this.element).hasText('');
+    await render(hbs`<TeamWidget @title={{this.title}} @description={{this.description}}/>`);
 
-    // Template block usage:
-    await render(hbs`
-      <TeamWidget>
-        template block text
-      </TeamWidget>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    // The assertions should pass
+    assert.dom(this.element).includesText('Team Gamma');
+    assert.dom(this.element).includesText('A team that focus on UI/UX design');
   });
 });

@@ -12,15 +12,9 @@ module('Integration | Component | member-form', function (hooks) {
 
     await render(hbs`<MemberForm />`);
 
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <MemberForm>
-        template block text
-      </MemberForm>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).includesText('Member Name');
+    assert.dom(this.element).includesText('Member Role');
+    assert.dom(this.element).includesText('Cancel');
+    assert.dom(this.element).includesText('Submit');
   });
 });

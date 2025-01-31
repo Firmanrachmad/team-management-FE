@@ -10,17 +10,16 @@ module('Integration | Component | member-widget', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<MemberWidget />`);
+    this.set('name', 'John Doe');
+    this.set('role', 'Developer');
 
-    assert.dom(this.element).hasText('');
+    await render(hbs`<MemberWidget @name={{this.name}} @role={{this.role}} />`);
 
-    // Template block usage:
-    await render(hbs`
-      <MemberWidget>
-        template block text
-      </MemberWidget>
-    `);
+    // The assertions should pass
+    assert.dom(this.element).includesText('John Doe');
+    assert.dom(this.element).includesText('Developer');
+    assert.dom(this.element).includesText('Edit');
+    assert.dom(this.element).includesText('Delete');
 
-    assert.dom(this.element).hasText('template block text');
   });
 });

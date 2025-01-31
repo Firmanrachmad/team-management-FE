@@ -9,18 +9,11 @@ module('Integration | Component | team-form', function (hooks) {
   test('it renders', async function (assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<TeamForm />`);
 
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <TeamForm>
-        template block text
-      </TeamForm>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).includesText('Team Name');
+    assert.dom(this.element).includesText('Team Description');
+    assert.dom(this.element).includesText('Cancel');
+    assert.dom(this.element).includesText('Submit');
   });
 });

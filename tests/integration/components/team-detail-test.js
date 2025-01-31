@@ -10,17 +10,15 @@ module('Integration | Component | team-detail', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<TeamDetail />`);
+    this.set('name', 'Team Gamma');
+    this.set('description', 'A team that focus on UI/UX design');
 
-    assert.dom(this.element).hasText('');
+    await render(hbs`<TeamDetail @name={{this.name}} @description={{this.description}}/>`);
 
-    // Template block usage:
-    await render(hbs`
-      <TeamDetail>
-        template block text
-      </TeamDetail>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    // The assertions should pass
+    assert.dom(this.element).includesText('Team Gamma');
+    assert.dom(this.element).includesText('A team that focus on UI/UX design');
+    assert.dom(this.element).includesText('Edit');
+    assert.dom(this.element).includesText('Delete');
   });
 });
