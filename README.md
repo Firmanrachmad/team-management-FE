@@ -1,7 +1,19 @@
 # team-management-fe
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This project is created using Ember.js application, which is a frontend for managing teams and their members. The application interacts with a Loopback API [Team Management App - Backend](https://github.com/Firmanrachmad/team-management-BE) to fetch and manage data related to teams and members.
+
+## Features
+
+- **Team Management**: Create, read, update, and delete teams.
+- **Member Management**: Add, remove, and update members within teams.
+- **Data Fetching**: The application fetches data from a Loopback API.
+
+## Screenshot
+
+Here’s a screenshot of the application in action:
+
+![Team Management App Screenshot](./images/Screenshot_1.png)
+![Team Management App - Team Details Screenshot](./images/Screenshot_2.png)
 
 ## Prerequisites
 
@@ -10,11 +22,11 @@ You will need the following things properly installed on your computer.
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+* [Google Chrome](https://google.com/chrome/) (or any modern web browser)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/Firmanrachmad/team-management-FE.git` this repository
 * `cd team-management-fe`
 * `npm install`
 
@@ -45,7 +57,17 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+To deploy this application, you can use any static hosting service (e.g., Netlify, Vercel, or GitHub Pages). Ensure that the production build is used for deployment.
+
+## Approach
+
+* **Components**: Reusable components were created to manage the UI for teams and members.
+
+* **Routes**: Routes were set up to handle navigation between different views (e.g., listing teams, adding a new team).
+
+* **Templates**: Handlebars templates were used to render the UI, with data binding to dynamically display team and member information.
+
+* **Data Fetching**: The application fetches data from a Loopback API.
 
 ## Further Reading / Useful Links
 
