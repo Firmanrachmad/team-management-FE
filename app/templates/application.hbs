@@ -1,6 +1,13 @@
+{{!-- app/templates/application.hbs --}}
+{{!-- 
+  Application Template
+  Displays the main layout for the application
+--}}
+
+{{!-- Page Title --}}
 {{ page-title "Team Management App"}}
 
-<!-- TopBar -->
+{{!-- TopBar --}}
 <div class="topbar navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand mr-4" href="/">Home</a>
@@ -10,7 +17,8 @@
   </div>
 </div>
 
-<!-- Main Content -->
+{{!-- Main Content --}}
 <div class="container my-3">
+  {{!-- Render all the pages and it's components here --}}
   {{outlet}}
 </div>

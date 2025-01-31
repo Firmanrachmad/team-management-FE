@@ -1,18 +1,37 @@
+{{!-- app/components/member-widget.hbs --}}
+{{!-- 
+  Member Widget Template
+  Displays a card with a member's name, role, and actions to edit or delete the member.
+--}}
+
 <div class="card p-3 text-center">
     <div class="card-body">
-            <i class="fas fa-user mb-4"></i>
+        {{!-- Member Icon --}}
+        <i class="fas fa-user mb-4"></i>
+
+        {{!-- Member Name --}}
         <h5 class="fw-bold">{{@name}}</h5>
+
+        {{!-- Member Role --}}
         <p class="text-muted">{{@role}}</p>
+
+        {{!-- Edit and Delete Buttons --}}
         <div class="d-flex justify-content-center gap-2 mt-4">
-            <LinkTo @route="edit-member" @models={{array @teamId @member.id}} class="btn btn-sm btn-warning">
+            {{!-- Edit Button --}}
+            <LinkTo 
+                @route="edit-member" 
+                @models={{array @teamId @member.id}} 
+                class="btn btn-sm btn-warning">
                 <i class="fas fa-edit me-2"></i> Edit
             </LinkTo>
-            <button class="btn btn-sm btn-danger" type="button"{{on "click" this.deleteMember}}>
+
+            {{!-- Delete Button --}}
+            <button 
+                class="btn btn-sm btn-danger" 
+                type="button"
+                {{on "click" this.deleteMember}}>
                 <i class="fas fa-trash-alt me-2"></i> Delete
             </button>
         </div>
     </div>
 </div>
-
-<!-- Debug: Check teamId and member.id -->
-{{!-- <div>Debug: Team ID = {{@teamId}}, Member ID = {{@member.id}}</div> --}}

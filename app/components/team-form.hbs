@@ -1,4 +1,12 @@
+{{!-- app/components/team-form.hbs --}}
+{{!-- 
+  Team Form Template
+  Displays a form for creating or editing a team.
+  Includes fields for the team's name and description, and handles form submission.
+--}}
+
 <form {{on "submit" this.submitForm}} class="p-4 rounded shadow-sm bg-white">
+    {{!-- Team Name Field --}}
     <div class="mb-3">
         <label for="team-name" class="form-label">Team Name</label>
         <Input
@@ -10,6 +18,8 @@
             {{on "input" this.updateName}}
         />
     </div>
+
+    {{!-- Team Description Field --}}
     <div class="mb-3">
         <label for="team-description" class="form-label">Team Description</label>
         <Input
@@ -21,6 +31,8 @@
             {{on "input" this.updateDescription}}
         />
     </div>
+
+    {{!-- Form Buttons --}}
     <div class="d-flex gap-3 justify-content-between">
         <button type="button" class="btn btn-secondary w-50" onclick="window.history.back();">Cancel</button>
         <button type="submit" class="btn btn-primary w-50">Submit</button>

@@ -1,13 +1,23 @@
+{{!-- app/templates/index.hbs --}}
+{{!-- 
+  Homepage Template
+  Displays the homepage of the application, including a list of teams and a button to add a new team.
+--}}
+
+{{!-- Page Title --}}
 {{page-title "Homepage"}}
 
+{{!-- Header Section --}}
 <div class="text-center mb-4">
     <h1 class="display-5">Homepage</h1>
 </div>
 
+{{!-- Teams List Section --}}
 <div class="row mb-4">
     <div class="col-6">
         <div class="d-flex gap-3">
             <h1 class="display-6 mb-0">Lists of Teams</h1>
+            {{!-- Link to the "Add Team" Route --}}
             <LinkTo @route="add-team" class="btn btn-primary btn-lg align-self-center h-auto">
                 <i class="fas fa-plus-circle me-2"></i> Add Team
             </LinkTo>
@@ -15,9 +25,12 @@
     </div>
 </div>
 
+{{!-- Teams Grid --}}
 <div class="row">
+    {{!-- Loop through each team in the model --}}
     {{#each @model as |team|}}
         <div class="col-md-4">
+            {{!-- Render a TeamWidget component for each team --}}
             <TeamWidget 
                 @title={{team.name}} 
                 @description={{team.description}} 

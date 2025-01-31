@@ -1,4 +1,12 @@
+{{!-- app/components/member-form.hbs --}}
+{{!-- 
+  Member Form Template
+  Displays a form for creating or editing a member.
+  Includes fields for the member's name and role, and handles form submission.
+--}}
+
 <form {{on "submit" this.submitForm}} class="p-4 rounded shadow-sm bg-white">
+    {{!-- Member Name Field --}}
     <div class="mb-3">
         <label for="member-name" class="form-label">Member Name</label>
         <Input
@@ -10,6 +18,8 @@
             {{on "input" this.updateName}}
         />
     </div>
+
+    {{!-- Member Role Field --}}
     <div class="mb-3">
         <label for="member-role" class="form-label">Member Role</label>
         <Input
@@ -21,10 +31,10 @@
             {{on "input" this.updateRole}}
         />
     </div>
+
+    {{!-- Form Buttons --}}
     <div class="d-flex gap-3 justify-content-between">
         <button type="button" class="btn btn-secondary w-50" onclick="window.history.back();">Cancel</button>
         <button type="submit" class="btn btn-primary w-50">Submit</button>
     </div>
 </form>
-
-{{!-- <div>Debug: Team ID = {{@teamId}}, Member ID = {{this.args.member.id}}</div> --}}

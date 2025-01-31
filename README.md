@@ -1,6 +1,6 @@
 # team-management-fe
 
-This project is created using Ember.js application, which is a frontend for managing teams and their members. The application interacts with a Loopback API [Team Management App - Backend](https://github.com/Firmanrachmad/team-management-BE) to fetch and manage data related to teams and members.
+This project is created using Ember.js framework. This project is the frontend side for managing teams and their members. The application interacts with a Loopback API [Team Management App - Backend](https://github.com/Firmanrachmad/team-management-BE) to fetch and manage data related to teams and members.
 
 ## Features
 

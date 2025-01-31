@@ -1,19 +1,23 @@
+{{!-- app/templates/add-member.hbs --}}
+{{!-- 
+  Add Member Template
+  Displays the form to add a new member to a team
+--}}
+
+{{!-- Page Title --}}
 {{page-title "Add Member"}}
 
 <div class="row">
+    {{!-- Header Section --}}
     <div class="row mb-4">
         <div class="text-center mb-4">
             <h1 class="display-5 mb-0">Add a new member</h1>
         </div>
     </div>
 
+    {{!-- Add Member Form --}}
     <div class="col-md-6 offset-md-3">
+        {{!-- Render a MemberForm component to display the form --}}
         <MemberForm @teamId={{this.model}}/>
     </div>
 </div>
-
-{{!-- <div class="row">
-    <div class="col-md-6 offset-md-3">
-        <h2 class="mb-4">Add a New Member</h2>
-    </div>
-</div> --}}

@@ -1,13 +1,25 @@
+{{!-- app/templates/teams.hbs --}}
+{{!-- 
+  Team Details Template
+  Displays detailed information about a specific team, including its members.
+  Provides options to add, edit, or delete members.
+--}}
+
+{{!-- Page Title --}}
 {{page-title "Team Details"}}
 
+{{!-- Header Section --}}
 <div class="row mb-4">
     <div class="text-center mb-4">
         <h1 class="display-5 mb-4">Team Details</h1>
     </div>
 </div>
 
+{{!-- Team Details and Members Section --}}
 <div class="row">
+    {{!-- Team Details Column --}}
     <div class="col-md-4 d-flex align-items-center justify-content-center">
+        {{!-- Render a TeamDetail component to display team information --}}
         <TeamDetail
             @name={{this.model.team.name}}
             @description={{this.model.team.description}} 
@@ -16,16 +28,23 @@
         />
     </div>
 
+    {{!-- Members List Column --}}
     <div class="col-md-8">
+        {{!-- Members List Header --}}
         <div class="d-flex align-items-center gap-3 mb-4">
             <h3 class="mb-0">Member List</h3>
+            {{!-- Link to the "Add Member" Route --}}
             <LinkTo @route="add-member" @model={{this.model.team.id}} class="btn btn-primary btn-lg h-auto" type="button">
                 <i class="fas fa-plus-circle me-2"></i> Add Member
             </LinkTo>
         </div>
+
+        {{!-- Members Grid --}}
         <div class="row">
+            {{!-- Loop through each member in the model --}}
             {{#each this.model.member as |member|}}
             <div class="col-md-6 mb-3">
+                {{!-- Render a MemberWidget component for each member --}}
                 <MemberWidget
                     @name={{member.name}}
                     @role={{member.role}}
@@ -33,10 +52,7 @@
                     @teamId={{this.model.team.id}}
                 />
             </div>
-            
             {{/each}}
         </div>
     </div>
-    
 </div>
-

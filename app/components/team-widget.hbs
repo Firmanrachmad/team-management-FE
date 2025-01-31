@@ -1,12 +1,21 @@
+{{!-- app/components/team-widget.hbs --}}
+{{!-- 
+  Team Widget Template
+  Displays a card with a team's name, description, and a random icon.
+  Clicking the card navigates to the team's details page.
+--}}
+
 <div class="card mb-4 clickable-card" {{on "click" this.goToTeam}}>
     <div class="card-body">
         <div class="row align-items-center mb-4">
             <div class="col-auto">
-                <!-- Random Icon -->
+                {{!-- Random Icon --}}
                 <i class="{{concat 'fas fa-lg ' this.randomIcon}}"></i>
             </div>
             <div class="col">
+                {{!-- Team Name --}}
                 <h5 class="card-title mb-2">{{@title}}</h5>
+                {{!-- Team Description --}}
                 <p class="card-text">{{@description}}</p>
             </div>
         </div>

@@ -1,13 +1,23 @@
+{{!-- app/templates/add-team.hbs --}}
+{{!-- 
+  Add Member Template
+  Displays the form to add a new team
+--}}
+
+{{!-- Page Title --}}
 {{page-title "Add Team"}}
 
 <div class="row">
+    {{!-- Header Section --}}
     <div class="row mb-4">
         <div class="text-center mb-4">
             <h1 class="display-5 mb-0">Add a new team</h1>
         </div>
     </div>
 
+    {{!-- Add Team Form --}}
     <div class="col-md-6 offset-md-3">
+        {{!-- Render a TeamForm component to display the form --}}
         <TeamForm/>
     </div>
 </div>
