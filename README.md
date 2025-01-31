@@ -5,8 +5,16 @@ This project is created using Ember.js application, which is a frontend for mana
 ## Features
 
 - **Team Management**: Create, read, update, and delete teams.
-- **Member Management**: Add, remove, and update members within teams.
+- **Member Management**: Create, read, update, and delete members within teams.
 - **Data Fetching**: The application fetches data from a Loopback API.
+
+
+## Approach
+
+* **Components**: Reusable components were created to manage the UI for teams and members.
+* **Routes**: Routes were set up to handle navigation between different views (e.g., listing teams, adding a new team).
+* **Templates**: Handlebars templates were used to render the UI, with data binding to dynamically display team and member information.
+* **Data Fetching**: The application fetches data from a Loopback API.
 
 ## Screenshot
 
@@ -26,7 +34,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/Firmanrachmad/team-management-FE.git` this repository
+* `git clone https://github.com/Firmanrachmad/team-management-FE.git`
 * `cd team-management-fe`
 * `npm install`
 
@@ -58,16 +66,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 ### Deploying
 
 To deploy this application, you can use any static hosting service (e.g., Netlify, Vercel, or GitHub Pages). Ensure that the production build is used for deployment.
-
-## Approach
-
-* **Components**: Reusable components were created to manage the UI for teams and members.
-
-* **Routes**: Routes were set up to handle navigation between different views (e.g., listing teams, adding a new team).
-
-* **Templates**: Handlebars templates were used to render the UI, with data binding to dynamically display team and member information.
-
-* **Data Fetching**: The application fetches data from a Loopback API.
 
 ## Further Reading / Useful Links
 
